@@ -35,7 +35,7 @@ Display.prototype.validate = function (book) {
   }
 };
 
-//show() //error and success show function
+//show()
 Display.prototype.show = function (type, message) {
   let msg = document.getElementById("msg");
   msg.innerHTML = `<div class="alert alert-${type} alert-dismissible fade show" role="alert">
