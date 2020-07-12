@@ -5,10 +5,8 @@ function Book(name, author, type) {
   this.author = author;
   this.type = type;
 }
-
 // Display constructor
 function Display() {}
-
 // Add methods to display prototype
 Display.prototype.add = function (book) {
   console.log("Adding to UI");
@@ -20,7 +18,6 @@ Display.prototype.add = function (book) {
                     </tr>`;
   tableBody.innerHTML += uiString;
 };
-
 //clear()
 Display.prototype.clear = function () {
   let libraryForm = document.getElementById("libraryForm");
@@ -34,7 +31,6 @@ Display.prototype.validate = function (book) {
     return true;
   }
 };
-
 //show() //error and success show function
 Display.prototype.show = function (type, message) {
   let msg = document.getElementById("msg");
@@ -68,7 +64,6 @@ function libraryFormSubmit(e) {
   } else if (programming.checked) {
     type = programming.value;
   }
-
   let book = new Book(name, author, type);
   console.log(book);
   let display = new Display();
@@ -80,6 +75,5 @@ function libraryFormSubmit(e) {
     //Show error to the user
     display.show("danger", "Sorry you cannot add this book");
   }
-
   e.preventDefault();
 }
